@@ -1,0 +1,2 @@
+# cmd
+useful commands
