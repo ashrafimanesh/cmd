@@ -20,4 +20,8 @@ ssh -D localhost:1010 -S /tmp/.ssh1010 -M -fN localhost1010
 ssh -S /tmp/.ssh1010 -O exit localhost1010
 
 ```
-
+### proxychains
+1- Check ip
+ ````
+ proxychains curl ifconfig.me/ip
+ ````
