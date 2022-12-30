@@ -40,3 +40,19 @@ tmux ls
 # To connect to a session
 tmux a -t test
 ```
+
+### Disk space
+- Top 10 large directories in `/var/` path.
+```
+sudo du -a /var/ | sort -n -r | head -n 10
+```
+
+- To see journal usage
+```
+journalctl --disk-usage
+```
+- To delete old x days journal logs
+```
+sudo journalctl --vacuum-time=2days
+```
+
