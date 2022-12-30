@@ -25,3 +25,18 @@ ssh -S /tmp/.ssh1010 -O exit localhost1010
  ````
  proxychains curl ifconfig.me/ip
  ````
+
+### tmux
+
+1- start new session with name
+```
+tmux new -s test
+```
+
+2- Attach to tmux existing session
+```
+# Sessions list
+tmux ls
+# To connect to a session
+tmux a -t test
+```
