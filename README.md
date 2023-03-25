@@ -56,3 +56,9 @@ journalctl --disk-usage
 sudo journalctl --vacuum-time=2days
 ```
 
+### process
+- to kill process by name
+```
+ps -ef |grep FullNode.jar |grep -v grep |awk '{print $2}'
+```
+
