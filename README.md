@@ -61,6 +61,11 @@ sudo journalctl --vacuum-time=2days
 ```
 ps -ef |grep FullNode.jar |grep -v grep |awk '{print $2}'
 ```
+### Docker
+- To delete a container logs
+```
+sudo sh -c 'echo "" > $(docker inspect --format="{{.LogPath}}" CONTAINER_NAME)'
+```
 
 ## Network
 
