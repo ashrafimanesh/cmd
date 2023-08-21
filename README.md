@@ -69,5 +69,18 @@ sudo sh -c 'echo "" > $(docker inspect --format="{{.LogPath}}" CONTAINER_NAME)'
 
 ## Network
 
+### iptables forward port to other ip
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+iptables -F
+iptables -t nat -F
+iptables -X
+
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.12.77:80
+iptables -t nat -A POSTROUTING -p tcp -d 192.168.12.77 --dport 80 -j SNAT --to-source 192.168.12.87
+```
+
+
 ### Check server network gateway
 ``` ip r | grep ^def ```
