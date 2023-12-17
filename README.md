@@ -55,6 +55,34 @@ journalctl --disk-usage
 ```
 sudo journalctl --vacuum-time=2days
 ```
+- Extend hard disk
+```
+fdisk /dev/sda
+
+Command (m for help): n
+
+Partition number (1-4): 3
+
+Command (m for help): w
+```
+```
+pvdisplay
+
+pvcreate /dev/sda3
+```
+```
+vgdisplay | grep Name
+
+vgextend vg_vmware /dev/sda3
+```
+```
+lvdisplay | grep Path
+
+lvextend -l +100%FREE /dev/vg_vmware/lv_root
+
+resize2fs /dev/vg_vmware/lv_root 
+```
+
 
 ### Process
 - to kill process by name
