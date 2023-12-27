@@ -1,7 +1,16 @@
 # Useful terminal commands:
 
+## Python
 
-### Login to server without password
+### Install compatible pip 
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+```
+
+## Ubuntu
+
+### Login to the server without any password
 ssh-copy-id [-i [identity_file]] [user@]machine
 
 ``` ssh-copy-id -i ~/.ssh/id_rsa.pub user@machine ```
