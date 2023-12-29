@@ -8,6 +8,13 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 ```
 
+## Centos
+Proxy httpd permission denied.
+
+```  /usr/sbin/setsebool -P httpd_can_network_connect 1 ```
+
+
+
 ## Ubuntu
 
 ### Login to the server without any password
