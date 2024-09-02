@@ -128,3 +128,9 @@ iptables -t nat -A POSTROUTING -p tcp -d 192.168.12.77 --dport 80 -j SNAT --to-s
 
 ### Check server network gateway
 ``` ip r | grep ^def ```
+
+## Apache2
+
+### FREE SSL
+
+``` sudo certbot --apache --cert-name anticoag360.ir --key-type rsa ```
